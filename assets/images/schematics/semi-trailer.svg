@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+  <!-- Background with technical grid -->
+  <rect width="800" height="450" fill="url(#bgGrad)" rx="12"/>
+  <rect width="800" height="450" fill="url(#grid)" rx="12"/>
+  
+  <!-- Blueprint Badge -->
+  <rect x="30" y="30" width="180" height="34" rx="4" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="42" y="52" font-family="'Inter', monospace" font-size="12" fill="#F97316" font-weight="700">SCHEMATIC: ST-403A</text>
+  <text x="145" y="52" font-family="'Inter', monospace" font-size="11" fill="#94A3B8">3-AXLE SEMI</text>
+
+  <!-- Technical Dimensions & Grid Lines -->
+  <line x1="120" y1="120" x2="720" y2="120" stroke="#F97316" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.6"/>
+  <line x1="120" y1="110" x2="120" y2="130" stroke="#F97316" stroke-width="1.5"/>
+  <line x1="720" y1="110" x2="720" y2="130" stroke="#F97316" stroke-width="1.5"/>
+  <text x="420" y="112" font-family="'Inter', monospace" font-size="11" fill="#F97316" text-anchor="middle">OVERALL LENGTH: 12,200 mm</text>
+
+  <!-- Gooseneck & Front Landing Section -->
+  <path d="M 120 180 L 220 180 L 240 220 L 720 220 L 720 270 L 230 270 L 210 230 L 120 230 Z" fill="#1E293B" stroke="#0284C7" stroke-width="2.5"/>
+  <path d="M 120 180 L 220 180 L 240 220 L 720 220" fill="none" stroke="#38BDF8" stroke-width="3"/>
+  
+  <!-- Structural Main Beam I-Section detailing -->
+  <rect x="240" y="224" width="476" height="42" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+  <line x1="240" y1="245" x2="716" y2="245" stroke="#F97316" stroke-width="1" stroke-dasharray="8 6"/>
+
+  <!-- Vertical Ribs / Gussets -->
+  <line x1="280" y1="225" x2="280" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
+  <line x1="330" y1="225" x2="330" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
+  <line x1="380" y1="225" x2="380" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
+  <line x1="430" y1="225" x2="430" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
+  <line x1="480" y1="225" x2="480" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
+  <line x1="530" y1="225" x2="530" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
+
+  <!-- Kingpin Assembly (Tractor 5th Wheel connection) -->
+  <rect x="155" y="230" width="16" height="24" fill="#F97316"/>
+  <circle cx="163" cy="254" r="5" fill="#FFFFFF"/>
+  <text x="163" y="278" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">2" KINGPIN</text>
+
+  <!-- Heavy Duty Landing Gear -->
+  <rect x="250" y="270" width="12" height="60" fill="#64748B"/>
+  <rect x="246" y="325" width="20" height="8" fill="#F97316" rx="2"/>
+  <line x1="262" y1="275" x2="285" y2="305" stroke="#64748B" stroke-width="2"/>
+
+  <!-- Tri-Axle Mechanical Suspension & Heavy Tires -->
+  <!-- Axle 1 -->
+  <g transform="translate(540, 290)">
+    <circle cx="0" cy="0" r="42" fill="#0B0F19" stroke="#64748B" stroke-width="4"/>
+    <circle cx="0" cy="0" r="26" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
+    <circle cx="0" cy="0" r="10" fill="#EA580C"/>
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+    <!-- Wheel bolts -->
+    <circle cx="-16" cy="0" r="2.5" fill="#CBD5E1"/>
+    <circle cx="16" cy="0" r="2.5" fill="#CBD5E1"/>
+    <circle cx="0" cy="-16" r="2.5" fill="#CBD5E1"/>
+    <circle cx="0" cy="16" r="2.5" fill="#CBD5E1"/>
+  </g>
+
+  <!-- Axle 2 -->
+  <g transform="translate(615, 290)">
+    <circle cx="0" cy="0" r="42" fill="#0B0F19" stroke="#64748B" stroke-width="4"/>
+    <circle cx="0" cy="0" r="26" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
+    <circle cx="0" cy="0" r="10" fill="#EA580C"/>
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+    <!-- Wheel bolts -->
+    <circle cx="-16" cy="0" r="2.5" fill="#CBD5E1"/>
+    <circle cx="16" cy="0" r="2.5" fill="#CBD5E1"/>
+    <circle cx="0" cy="-16" r="2.5" fill="#CBD5E1"/>
+    <circle cx="0" cy="16" r="2.5" fill="#CBD5E1"/>
+  </g>
+
+  <!-- Axle 3 -->
+  <g transform="translate(690, 290)">
+    <circle cx="0" cy="0" r="42" fill="#0B0F19" stroke="#64748B" stroke-width="4"/>
+    <circle cx="0" cy="0" r="26" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
+    <circle cx="0" cy="0" r="10" fill="#EA580C"/>
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+    <!-- Wheel bolts -->
+    <circle cx="-16" cy="0" r="2.5" fill="#CBD5E1"/>
+    <circle cx="16" cy="0" r="2.5" fill="#CBD5E1"/>
+    <circle cx="0" cy="-16" r="2.5" fill="#CBD5E1"/>
+    <circle cx="0" cy="16" r="2.5" fill="#CBD5E1"/>
+  </g>
+
+  <!-- Leaf Spring Suspension / Trunnion Graphic -->
+  <path d="M 505 270 Q 540 282 575 270 Q 615 282 655 270 Q 690 282 725 270" fill="none" stroke="#F97316" stroke-width="3"/>
+  <rect x="525" y="266" width="30" height="8" fill="#475569"/>
+  <rect x="600" y="266" width="30" height="8" fill="#475569"/>
+  <rect x="675" y="266" width="30" height="8" fill="#475569"/>
+
+  <!-- Rear Underrun Protection & Reflectors -->
+  <rect x="730" y="265" width="8" height="60" fill="#EA580C"/>
+  <rect x="715" y="318" width="28" height="6" fill="#EF4444"/>
+
+  <!-- Ground Line -->
+  <line x1="80" y1="334" x2="750" y2="334" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+  <!-- Engineering Annotation Specs -->
+  <g transform="translate(30, 370)">
+    <text x="0" y="16" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#F1F5F9">HEAVY-DUTY MULTI-AXLE SEMI-TRAILER</text>
+    <text x="0" y="34" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Payload Capacity: 35T - 55T | High-Tensile Steel Main Beams (IS 2062 / E350/E450 Grade)</text>
+    <text x="0" y="50" font-family="'Inter', sans-serif" font-size="10" fill="#F97316">Fabricated at Adityapur Plant • Custom Lengths &amp; Axle Formats Available</text>
+  </g>
+</svg>

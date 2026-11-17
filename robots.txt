@@ -1,0 +1,8 @@
+# robots.txt for Spine Automotive Private Limited
+# https://spineautomotive.com/
+
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+
+Sitemap: https://spineautomotive.com/sitemap.xml

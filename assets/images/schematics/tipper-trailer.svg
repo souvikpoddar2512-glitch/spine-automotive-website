@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <pattern id="grid3" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgGrad3)" rx="12"/>
+  <rect width="800" height="450" fill="url(#grid3)" rx="12"/>
+  
+  <rect x="30" y="30" width="190" height="34" rx="4" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="42" y="52" font-family="'Inter', monospace" font-size="12" fill="#F97316" font-weight="700">SCHEMATIC: TP-32C</text>
+  <text x="145" y="52" font-family="'Inter', monospace" font-size="11" fill="#94A3B8">32 CuM TIPPER</text>
+
+  <!-- Tipper Body (U-shape / Box Rock Body) -->
+  <path d="M 170 140 L 680 140 L 710 230 L 190 230 Z" fill="#1E293B" stroke="#EA580C" stroke-width="2.5"/>
+  <!-- Tipper Ribs & Stiffeners -->
+  <line x1="240" y1="140" x2="250" y2="230" stroke="#F97316" stroke-width="2"/>
+  <line x1="310" y1="140" x2="320" y2="230" stroke="#F97316" stroke-width="2"/>
+  <line x1="380" y1="140" x2="390" y2="230" stroke="#F97316" stroke-width="2"/>
+  <line x1="450" y1="140" x2="460" y2="230" stroke="#F97316" stroke-width="2"/>
+  <line x1="520" y1="140" x2="530" y2="230" stroke="#F97316" stroke-width="2"/>
+  <line x1="590" y1="140" x2="600" y2="230" stroke="#F97316" stroke-width="2"/>
+  <line x1="660" y1="140" x2="670" y2="230" stroke="#F97316" stroke-width="2"/>
+
+  <!-- Hydraulic Telescopic Cylinder / Ram at Front -->
+  <rect x="150" y="150" width="16" height="85" fill="#38BDF8" rx="3"/>
+  <line x1="158" y1="150" x2="158" y2="245" stroke="#0284C7" stroke-width="2"/>
+  <text x="140" y="195" font-family="'Inter', sans-serif" font-size="9" fill="#38BDF8" text-anchor="end">FRONT HOIST RAM</text>
+
+  <!-- Chassis Underframe -->
+  <path d="M 130 240 L 220 240 L 240 260 L 710 260 L 710 280 L 235 280 L 215 250 L 130 250 Z" fill="#0F172A" stroke="#64748B" stroke-width="2"/>
+
+  <!-- Rear Pivot Hinge -->
+  <circle cx="700" cy="240" r="8" fill="#F97316"/>
+  <circle cx="700" cy="240" r="3" fill="#FFFFFF"/>
+  <text x="700" y="222" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">REAR PIVOT</text>
+
+  <!-- Rear Tailgate Mechanism -->
+  <line x1="680" y1="140" x2="710" y2="230" stroke="#EF4444" stroke-width="3"/>
+  <rect x="706" y="226" width="8" height="8" fill="#EF4444"/>
+
+  <!-- Axles & Wheels -->
+  <g transform="translate(540, 292)">
+    <circle cx="0" cy="0" r="40" fill="#0B0F19" stroke="#64748B" stroke-width="4"/>
+    <circle cx="0" cy="0" r="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
+    <circle cx="0" cy="0" r="10" fill="#EA580C"/>
+  </g>
+  <g transform="translate(625, 292)">
+    <circle cx="0" cy="0" r="40" fill="#0B0F19" stroke="#64748B" stroke-width="4"/>
+    <circle cx="0" cy="0" r="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
+    <circle cx="0" cy="0" r="10" fill="#EA580C"/>
+  </g>
+
+  <!-- Landing Legs -->
+  <rect x="230" y="275" width="12" height="55" fill="#64748B"/>
+  <rect x="226" y="325" width="20" height="8" fill="#F97316" rx="2"/>
+
+  <!-- Ground Line -->
+  <line x1="100" y1="334" x2="740" y2="334" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+  <g transform="translate(30, 370)">
+    <text x="0" y="16" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#F1F5F9">HEAVY-DUTY TIPPER &amp; DUMP SEMI-TRAILER</text>
+    <text x="0" y="34" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Capacity: 24 - 42 CuM | Wear-Resistant Hardox / High-Tensile Steel Body for Mining &amp; Aggregates</text>
+    <text x="0" y="50" font-family="'Inter', sans-serif" font-size="10" fill="#F97316">Fabricated at Adityapur Plant • High-Stability Deep Center of Gravity Design</text>
+  </g>
+</svg>

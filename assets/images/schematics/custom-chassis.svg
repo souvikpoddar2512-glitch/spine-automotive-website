@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgGrad4)" rx="12"/>
+  <rect width="800" height="450" fill="url(#grid4)" rx="12"/>
+  
+  <rect x="30" y="30" width="230" height="34" rx="4" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="42" y="52" font-family="'Inter', monospace" font-size="12" fill="#F97316" font-weight="700">FABRICATION: CH-FRAME</text>
+  <text x="185" y="52" font-family="'Inter', monospace" font-size="11" fill="#94A3B8">CHASSIS &amp; SUB-ASSY</text>
+
+  <!-- Top-down view: Heavy ladder chassis frame with cross members -->
+  <g transform="translate(100, 130)">
+    <!-- Main Long Members (Side Rails) -->
+    <rect x="0" y="20" width="600" height="18" fill="#1E293B" stroke="#EA580C" stroke-width="2" rx="3"/>
+    <rect x="0" y="140" width="600" height="18" fill="#1E293B" stroke="#EA580C" stroke-width="2" rx="3"/>
+    
+    <!-- Cross Members (Ladder rungs with lightening holes) -->
+    <!-- Front cross member -->
+    <rect x="20" y="38" width="18" height="102" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+    <!-- Cross member 2 -->
+    <rect x="120" y="38" width="16" height="102" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+    <circle cx="128" cy="89" r="4" fill="#EA580C"/>
+    <!-- Cross member 3 (Bogie / trunnion mounting area) -->
+    <rect x="220" y="38" width="22" height="102" fill="#0F172A" stroke="#F97316" stroke-width="1.5"/>
+    <rect x="320" y="38" width="22" height="102" fill="#0F172A" stroke="#F97316" stroke-width="1.5"/>
+    <!-- Cross member 4 -->
+    <rect x="420" y="38" width="16" height="102" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+    <!-- Rear cross member with towing eyes -->
+    <rect x="560" y="38" width="20" height="102" fill="#0F172A" stroke="#EA580C" stroke-width="2"/>
+
+    <!-- Diagonal Gussets for torsional stiffness -->
+    <line x1="220" y1="38" x2="340" y2="140" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <line x1="340" y1="38" x2="220" y2="140" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+    <!-- Outriggers for side support -->
+    <line x1="120" y1="20" x2="120" y2="0" stroke="#64748B" stroke-width="3"/>
+    <line x1="220" y1="20" x2="220" y2="0" stroke="#64748B" stroke-width="3"/>
+    <line x1="320" y1="20" x2="320" y2="0" stroke="#64748B" stroke-width="3"/>
+    <line x1="420" y1="20" x2="420" y2="0" stroke="#64748B" stroke-width="3"/>
+    <line x1="520" y1="20" x2="520" y2="0" stroke="#64748B" stroke-width="3"/>
+
+    <line x1="120" y1="158" x2="120" y2="178" stroke="#64748B" stroke-width="3"/>
+    <line x1="220" y1="158" x2="220" y2="178" stroke="#64748B" stroke-width="3"/>
+    <line x1="320" y1="158" x2="320" y2="178" stroke="#64748B" stroke-width="3"/>
+    <line x1="420" y1="158" x2="420" y2="178" stroke="#64748B" stroke-width="3"/>
+    <line x1="520" y1="158" x2="520" y2="178" stroke="#64748B" stroke-width="3"/>
+  </g>
+
+  <!-- Precision Measurement indicators -->
+  <line x1="100" y1="325" x2="700" y2="325" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="400" y="320" font-family="'Inter', monospace" font-size="11" fill="#38BDF8" text-anchor="middle">SUBMERGED ARC WELDED I-BEAM / HIGH-YIELD FLANGES</text>
+
+  <g transform="translate(30, 370)">
+    <text x="0" y="16" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#F1F5F9">CUSTOM STRUCTURAL CHASSIS &amp; SUB-ASSEMBLIES</text>
+    <text x="0" y="34" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Engineered for Maximum Torsional Rigidity &amp; Lowest Tare Weight | Automated CNC Plasma &amp; SAW Welding</text>
+    <text x="0" y="50" font-family="'Inter', sans-serif" font-size="10" fill="#F97316">Adityapur Heavy Industrial Belt Fabrication Standards</text>
+  </g>
+</svg>

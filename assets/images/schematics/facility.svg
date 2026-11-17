@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <pattern id="grid5" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgGrad5)" rx="12"/>
+  <rect width="800" height="450" fill="url(#grid5)" rx="12"/>
+  
+  <rect x="30" y="30" width="220" height="34" rx="4" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="42" y="52" font-family="'Inter', monospace" font-size="12" fill="#F97316" font-weight="700">FACILITY: ADITYAPUR</text>
+  <text x="175" y="52" font-family="'Inter', monospace" font-size="11" fill="#94A3B8">PHASE-1 PLANT</text>
+
+  <!-- Industrial Shed & Overhead Crane Structure -->
+  <g transform="translate(60, 100)">
+    <!-- Roof Truss & Overhead Crane Gantry -->
+    <line x1="20" y1="20" x2="660" y2="20" stroke="#475569" stroke-width="4"/>
+    <line x1="20" y1="40" x2="660" y2="40" stroke="#EA580C" stroke-width="3"/>
+    
+    <!-- Vertical Building Columns -->
+    <line x1="20" y1="20" x2="20" y2="240" stroke="#334155" stroke-width="6"/>
+    <line x1="340" y1="20" x2="340" y2="240" stroke="#334155" stroke-width="4"/>
+    <line x1="660" y1="20" x2="660" y2="240" stroke="#334155" stroke-width="6"/>
+
+    <!-- Gantry Crane Trolley & Hook -->
+    <rect x="220" y="32" width="60" height="18" fill="#F97316" rx="2"/>
+    <line x1="250" y1="50" x2="250" y2="90" stroke="#CBD5E1" stroke-width="2"/>
+    <path d="M 246 90 Q 250 102 254 90" fill="none" stroke="#EA580C" stroke-width="3"/>
+    <text x="250" y="28" font-family="'Inter', sans-serif" font-size="9" fill="#F97316" text-anchor="middle">OVERHEAD GANTRY CRANE</text>
+
+    <!-- Manufacturing Bay 1: CNC Cutting & Plate Preparation -->
+    <rect x="50" y="160" width="160" height="70" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5" rx="4"/>
+    <rect x="65" y="180" width="130" height="20" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <circle cx="130" cy="190" r="5" fill="#38BDF8"/>
+    <text x="130" y="218" font-family="'Inter', sans-serif" font-size="10" fill="#38BDF8" text-anchor="middle" font-weight="600">CNC PLASMA / PROFILING</text>
+
+    <!-- Manufacturing Bay 2: Fixturing & Submerged Arc Welding -->
+    <rect x="260" y="140" width="180" height="90" fill="#0F172A" stroke="#EA580C" stroke-width="1.5" rx="4"/>
+    <rect x="280" y="170" width="140" height="30" fill="#1E293B" stroke="#F97316" stroke-width="1"/>
+    <circle cx="350" cy="185" r="4" fill="#FBBF24"/>
+    <text x="350" y="218" font-family="'Inter', sans-serif" font-size="10" fill="#F97316" text-anchor="middle" font-weight="600">HEAVY BEAM SAW FIXTURE</text>
+
+    <!-- Manufacturing Bay 3: Final Assembly & Quality Inspection -->
+    <rect x="490" y="150" width="150" height="80" fill="#0F172A" stroke="#10B981" stroke-width="1.5" rx="4"/>
+    <path d="M 545 185 L 555 195 L 575 175" fill="none" stroke="#10B981" stroke-width="3"/>
+    <text x="565" y="218" font-family="'Inter', sans-serif" font-size="10" fill="#10B981" text-anchor="middle" font-weight="600">QA TOLERANCE &amp; INSPECTION</text>
+  </g>
+
+  <g transform="translate(30, 370)">
+    <text x="0" y="16" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#F1F5F9">SPINE AUTOMOTIVE PRODUCTION WORKSHOP</text>
+    <text x="0" y="34" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">NS-39, Phase-1, Adityapur Industrial Area | Integrated Material Preparation, Precision Welding &amp; Finishing</text>
+    <text x="0" y="50" font-family="'Inter', sans-serif" font-size="10" fill="#F97316">Equipped for High-Payload Commercial Fleet Builds &amp; Custom Fabrications</text>
+  </g>
+</svg>
