@@ -36,6 +36,12 @@
   --accent-subtle: #FFF7ED;
   --accent-glow: rgba(234, 88, 12, 0.16);
 
+  /* Corporate Brand Colors matching Spine Automotive Logo */
+  --brand-blue: #004BE7;
+  --brand-blue-hover: #003ECC;
+  --brand-blue-glow: rgba(0, 75, 231, 0.2);
+  --brand-gold: #FEC902;
+
   /* Industrial Steel Tones */
   --steel-dark: #0F172A;
   --steel-slate: #1E293B;
@@ -73,7 +79,7 @@
   --radius-full: 9999px;
 
   /* Container width */
-  --max-width: 1240px;
+  --max-width: 1280px;
 }
 
 /* --------------------------------------------------------------------------
@@ -100,6 +106,11 @@
   --accent-active: #EA580C;
   --accent-subtle: rgba(249, 115, 22, 0.12);
   --accent-glow: rgba(249, 115, 22, 0.25);
+
+  /* Brand Blue in Dark Mode (High contrast electric blue) */
+  --brand-blue: #3B82F6;
+  --brand-blue-hover: #60A5FA;
+  --brand-blue-glow: rgba(59, 130, 246, 0.25);
 
   --status-badge-bg: rgba(245, 158, 11, 0.18);
   --status-badge-text: #FBBF24;
@@ -377,47 +388,113 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.25rem;
   height: var(--header-height);
 }
 
-/* Brand Wordmark */
-.brand-link {
+/* Brand Wordmark & Hero Logo */
+.brand-link,
+.hero-logo {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
+  flex-shrink: 0;
+  transition: opacity var(--transition-fast);
 }
 
-.brand-emblem {
-  width: 44px;
+.brand-link:hover,
+.hero-logo:hover {
+  opacity: 0.94;
+}
+
+.brand-emblem,
+.hero-logo-img {
+  width: auto;
   height: 44px;
+  max-height: 46px;
+  object-fit: contain;
   flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.brand-link:hover .brand-emblem,
+.hero-logo:hover .hero-logo-img {
+  transform: scale(1.03);
 }
 
 .brand-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .brand-name {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.1875rem;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   color: var(--text-primary);
-  line-height: 1.1;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
-.brand-name span {
-  color: var(--accent-primary);
+@media (min-width: 1280px) {
+  .brand-name {
+    font-size: 1.25rem;
+  }
+  .brand-emblem,
+  .hero-logo-img {
+    height: 46px;
+  }
+}
+
+.brand-name span,
+.brand-name-accent {
+  color: var(--brand-blue);
+  font-weight: 800;
+  transition: color var(--transition-fast);
 }
 
 .brand-tagline {
-  font-size: 0.6875rem;
+  font-family: var(--font-body);
+  font-size: 0.625rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-muted);
+  line-height: 1.2;
+  margin-top: 1px;
+  white-space: nowrap;
+}
+
+/* Hero Badge Pill with Logo */
+.hero-brand-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-class-logo {
+  width: auto;
+  height: 18px;
+  max-height: 20px;
+  object-fit: contain;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.footer-brand-logo {
+  width: auto;
+  height: 38px;
+  max-height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.footer-col-brand .brand-name-accent {
+  color: #38BDF8;
 }
 
 /* Desktop Navigation */
@@ -429,18 +506,32 @@ button, input, select, textarea {
   .nav-desktop {
     display: flex;
     align-items: center;
-    gap: 1.75rem;
+    gap: 1.125rem;
+    flex-shrink: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .nav-desktop {
+    gap: 1.625rem;
   }
 }
 
 .nav-link {
   font-family: var(--font-heading);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--text-secondary);
   position: relative;
   padding: 0.5rem 0;
+  white-space: nowrap;
   transition: color var(--transition-fast);
+}
+
+@media (min-width: 1280px) {
+  .nav-link {
+    font-size: 0.9375rem;
+  }
 }
 
 .nav-link:hover,
@@ -464,6 +555,7 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-shrink: 0;
 }
 
 /* Theme Toggle Button */
@@ -541,6 +633,65 @@ button, input, select, textarea {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Responsive visibility utilities & mobile header adjustments */
+@media (max-width: 1023px) {
+  .d-none-mobile {
+    display: none !important;
+  }
+  
+  .header-container {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+    gap: 0.5rem;
+  }
+  
+  .brand-link,
+  .hero-logo {
+    gap: 0.5rem;
+  }
+  
+  .brand-emblem,
+  .hero-logo-img {
+    height: 35px;
+    max-height: 36px;
+  }
+  
+  .brand-name {
+    font-size: 0.9375rem;
+    letter-spacing: 0.02em;
+  }
+  
+  .brand-tagline {
+    font-size: 0.53125rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .header-actions {
+    gap: 0.375rem;
+  }
+  
+  .theme-toggle-btn {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .theme-toggle-btn svg {
+    width: 17px;
+    height: 17px;
+  }
+  
+  .mobile-nav-toggle {
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+    gap: 4px;
+  }
+  
+  .mobile-nav-toggle span {
+    width: 18px;
+  }
+}
+
 /* Mobile Drawer */
 .mobile-nav-drawer {
   display: none;
@@ -600,8 +751,8 @@ button, input, select, textarea {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
   align-items: center;
 }
 
@@ -632,11 +783,34 @@ button, input, select, textarea {
   letter-spacing: 0.04em;
 }
 
+/* Grid overflow protection for mobile-first robustness */
+.hero-grid > *,
+.about-grid > *,
+.product-grid > *,
+.capabilities-flow > *,
+.value-points-grid > *,
+.industry-grid > *,
+.quality-grid > *,
+.contact-grid > *,
+.footer-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero-schematic-card,
+.product-card,
+.contact-card-box,
+.plant-highlight-banner {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .hero-title {
-  font-size: 2.375rem;
+  font-size: 2rem;
   line-height: 1.15;
   margin-bottom: 1.5rem;
   color: var(--text-primary);
+  word-break: break-word;
 }
 
 @media (min-width: 768px) {
@@ -730,16 +904,30 @@ button, input, select, textarea {
   box-shadow: 0 25px 35px -5px rgba(15, 23, 42, 0.15);
 }
 
-.schematic-header {
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.schematic-header,
+.schematic-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.875rem 1.25rem;
-  background-color: var(--bg-surface-elevated);
-  border-bottom: 1px solid var(--border-color);
-  font-family: var(--font-heading);
-  font-size: 0.8125rem;
-  font-weight: 700;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .hero-trust-strip {
+    grid-template-columns: 1fr !important;
+    gap: 0.875rem;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .schematic-status {
@@ -784,7 +972,7 @@ button, input, select, textarea {
    -------------------------------------------------------------------------- */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 3rem;
   align-items: center;
 }
@@ -833,7 +1021,7 @@ button, input, select, textarea {
 
 .about-stat-cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.25rem;
 }
 
@@ -879,7 +1067,7 @@ button, input, select, textarea {
    -------------------------------------------------------------------------- */
 .product-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
 }
 
@@ -998,7 +1186,7 @@ button, input, select, textarea {
    -------------------------------------------------------------------------- */
 .capabilities-flow {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
   margin-bottom: 3.5rem;
 }
@@ -1051,7 +1239,7 @@ button, input, select, textarea {
   border-radius: var(--radius-xl);
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 @media (min-width: 1024px) {
@@ -1089,7 +1277,7 @@ button, input, select, textarea {
    -------------------------------------------------------------------------- */
 .value-points-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.75rem;
 }
 
@@ -1151,7 +1339,7 @@ button, input, select, textarea {
    -------------------------------------------------------------------------- */
 .industry-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
 }
 
@@ -1204,7 +1392,7 @@ button, input, select, textarea {
    -------------------------------------------------------------------------- */
 .quality-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.75rem;
 }
 
@@ -1271,7 +1459,7 @@ button, input, select, textarea {
    -------------------------------------------------------------------------- */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 3rem;
 }
 
@@ -1350,7 +1538,7 @@ button, input, select, textarea {
 /* Form Styles */
 .form-group-row {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.25rem;
 }
 
@@ -1456,7 +1644,7 @@ textarea.form-control {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 3rem;
   margin-bottom: 3.5rem;
 }

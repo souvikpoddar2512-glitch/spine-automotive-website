@@ -1,6 +1,9 @@
 # Spine Automotive - Client Asset & Placeholder Checklist
 
-This document details all customizable placeholders on the website and where to replace them.
+> [!NOTE]
+> **Branding Update (Completed)**:
+> - **Official Logo**: Configured with `assets/images/spine_automotive_logo_transparent.png` across header brand links, hero badges, footer wordmarks, and JSON-LD schema.
+> - **Favicon**: Configured with `assets/images/spine_automotive_favicon_64x64.png`.
 
 ---
 

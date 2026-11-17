@@ -1,111 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0F172A" />
-      <stop offset="100%" stop-color="#1E293B" />
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
     </linearGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.35"/>
+      <path d="M40 0H0V40" fill="none" stroke="#334155" stroke-width=".75" opacity=".35"/>
     </pattern>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#475569"/>
+      <stop offset="1" stop-color="#26364B"/>
+    </linearGradient>
+    <linearGradient id="deck" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#64748B"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
   </defs>
-  <!-- Background with technical grid -->
-  <rect width="800" height="450" fill="url(#bgGrad)" rx="12"/>
-  <rect width="800" height="450" fill="url(#grid)" rx="12"/>
-  
-  <!-- Blueprint Badge -->
-  <rect x="30" y="30" width="180" height="34" rx="4" fill="#1E293B" stroke="#475569" stroke-width="1"/>
-  <text x="42" y="52" font-family="'Inter', monospace" font-size="12" fill="#F97316" font-weight="700">SCHEMATIC: ST-403A</text>
-  <text x="145" y="52" font-family="'Inter', monospace" font-size="11" fill="#94A3B8">3-AXLE SEMI</text>
 
-  <!-- Technical Dimensions & Grid Lines -->
-  <line x1="120" y1="120" x2="720" y2="120" stroke="#F97316" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.6"/>
-  <line x1="120" y1="110" x2="120" y2="130" stroke="#F97316" stroke-width="1.5"/>
-  <line x1="720" y1="110" x2="720" y2="130" stroke="#F97316" stroke-width="1.5"/>
-  <text x="420" y="112" font-family="'Inter', monospace" font-size="11" fill="#F97316" text-anchor="middle">OVERALL LENGTH: 12,200 mm</text>
+  <rect width="800" height="450" rx="12" fill="url(#bg)"/>
+  <rect width="800" height="450" rx="12" fill="url(#grid)"/>
 
-  <!-- Gooseneck & Front Landing Section -->
-  <path d="M 120 180 L 220 180 L 240 220 L 720 220 L 720 270 L 230 270 L 210 230 L 120 230 Z" fill="#1E293B" stroke="#0284C7" stroke-width="2.5"/>
-  <path d="M 120 180 L 220 180 L 240 220 L 720 220" fill="none" stroke="#38BDF8" stroke-width="3"/>
-  
-  <!-- Structural Main Beam I-Section detailing -->
-  <rect x="240" y="224" width="476" height="42" fill="#0F172A" stroke="#475569" stroke-width="1"/>
-  <line x1="240" y1="245" x2="716" y2="245" stroke="#F97316" stroke-width="1" stroke-dasharray="8 6"/>
+  <!-- Header: model name only -->
+  <text x="32" y="42" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#F97316">SCHEMATIC · SW-403A</text>
+  <text x="768" y="42" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing=".8" fill="#94A3B8">SIDEWALL TRAILER</text>
+  <line x1="32" y1="58" x2="768" y2="58" stroke="#475569" stroke-width="1"/>
 
-  <!-- Vertical Ribs / Gussets -->
-  <line x1="280" y1="225" x2="280" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
-  <line x1="330" y1="225" x2="330" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
-  <line x1="380" y1="225" x2="380" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
-  <line x1="430" y1="225" x2="430" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
-  <line x1="480" y1="225" x2="480" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
-  <line x1="530" y1="225" x2="530" y2="265" stroke="#38BDF8" stroke-width="1.5"/>
+  <!-- Sidewall body -->
+  <path d="M112 130 L724 130 L724 269 L112 269 Z"
+        fill="url(#panel)" stroke="#38BDF8" stroke-width="2.4" stroke-linejoin="round"/>
 
-  <!-- Kingpin Assembly (Tractor 5th Wheel connection) -->
-  <rect x="155" y="230" width="16" height="24" fill="#F97316"/>
-  <circle cx="163" cy="254" r="5" fill="#FFFFFF"/>
-  <text x="163" y="278" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">2" KINGPIN</text>
+  <!-- Top rail and lower sill -->
+  <path d="M108 128H728V139H108Z" fill="#94A3B8" stroke="#CBD5E1" stroke-width="1"/>
+  <path d="M108 260H728V275H108Z" fill="#334155" stroke="#7DD3FC" stroke-width="1.5"/>
 
-  <!-- Heavy Duty Landing Gear -->
-  <rect x="250" y="270" width="12" height="60" fill="#64748B"/>
-  <rect x="246" y="325" width="20" height="8" fill="#F97316" rx="2"/>
-  <line x1="262" y1="275" x2="285" y2="305" stroke="#64748B" stroke-width="2"/>
+  <!-- Front bulkhead / headboard -->
+  <path d="M112 130H145V260H112Z" fill="#64748B" stroke="#CBD5E1" stroke-width="1.5"/>
+  <path d="M119 140V250M136 140V250" stroke="#94A3B8" stroke-width="2"/>
 
-  <!-- Tri-Axle Mechanical Suspension & Heavy Tires -->
-  <!-- Axle 1 -->
-  <g transform="translate(540, 290)">
-    <circle cx="0" cy="0" r="42" fill="#0B0F19" stroke="#64748B" stroke-width="4"/>
-    <circle cx="0" cy="0" r="26" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
-    <circle cx="0" cy="0" r="10" fill="#EA580C"/>
-    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
-    <!-- Wheel bolts -->
-    <circle cx="-16" cy="0" r="2.5" fill="#CBD5E1"/>
-    <circle cx="16" cy="0" r="2.5" fill="#CBD5E1"/>
-    <circle cx="0" cy="-16" r="2.5" fill="#CBD5E1"/>
-    <circle cx="0" cy="16" r="2.5" fill="#CBD5E1"/>
+  <!-- Sidewall panels with vertical ribs -->
+  <g stroke="#94A3B8" stroke-width="2" opacity=".95">
+    <path d="M165 141V258M205 141V258M245 141V258M285 141V258M325 141V258M365 141V258M405 141V258M445 141V258M485 141V258M525 141V258M565 141V258M605 141V258M645 141V258M685 141V258"/>
+  </g>
+  <g stroke="#1E293B" stroke-width="1" opacity=".9">
+    <path d="M169 142V257M209 142V257M249 142V257M289 142V257M329 142V257M369 142V257M409 142V257M449 142V257M489 142V257M529 142V257M569 142V257M609 142V257M649 142V257M689 142V257"/>
   </g>
 
-  <!-- Axle 2 -->
-  <g transform="translate(615, 290)">
-    <circle cx="0" cy="0" r="42" fill="#0B0F19" stroke="#64748B" stroke-width="4"/>
-    <circle cx="0" cy="0" r="26" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
-    <circle cx="0" cy="0" r="10" fill="#EA580C"/>
-    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
-    <!-- Wheel bolts -->
-    <circle cx="-16" cy="0" r="2.5" fill="#CBD5E1"/>
-    <circle cx="16" cy="0" r="2.5" fill="#CBD5E1"/>
-    <circle cx="0" cy="-16" r="2.5" fill="#CBD5E1"/>
-    <circle cx="0" cy="16" r="2.5" fill="#CBD5E1"/>
+  <!-- Panel seams and latch details -->
+  <path d="M151 196H714" stroke="#64748B" stroke-width="1" opacity=".65"/>
+  <g fill="#F97316">
+    <rect x="177" y="186" width="5" height="20" rx="1"/>
+    <rect x="257" y="186" width="5" height="20" rx="1"/>
+    <rect x="337" y="186" width="5" height="20" rx="1"/>
+    <rect x="417" y="186" width="5" height="20" rx="1"/>
+    <rect x="497" y="186" width="5" height="20" rx="1"/>
+    <rect x="577" y="186" width="5" height="20" rx="1"/>
+    <rect x="657" y="186" width="5" height="20" rx="1"/>
   </g>
 
-  <!-- Axle 3 -->
-  <g transform="translate(690, 290)">
-    <circle cx="0" cy="0" r="42" fill="#0B0F19" stroke="#64748B" stroke-width="4"/>
-    <circle cx="0" cy="0" r="26" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
-    <circle cx="0" cy="0" r="10" fill="#EA580C"/>
-    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
-    <!-- Wheel bolts -->
-    <circle cx="-16" cy="0" r="2.5" fill="#CBD5E1"/>
-    <circle cx="16" cy="0" r="2.5" fill="#CBD5E1"/>
-    <circle cx="0" cy="-16" r="2.5" fill="#CBD5E1"/>
-    <circle cx="0" cy="16" r="2.5" fill="#CBD5E1"/>
+  <!-- Rear gate and hinges -->
+  <path d="M695 139H720V259H695Z" fill="#334155" stroke="#CBD5E1" stroke-width="1.5"/>
+  <path d="M702 146V252M713 146V252" stroke="#94A3B8" stroke-width="2"/>
+  <g fill="#F97316">
+    <rect x="697" y="158" width="7" height="12" rx="1"/>
+    <rect x="697" y="220" width="7" height="12" rx="1"/>
   </g>
 
-  <!-- Leaf Spring Suspension / Trunnion Graphic -->
-  <path d="M 505 270 Q 540 282 575 270 Q 615 282 655 270 Q 690 282 725 270" fill="none" stroke="#F97316" stroke-width="3"/>
-  <rect x="525" y="266" width="30" height="8" fill="#475569"/>
-  <rect x="600" y="266" width="30" height="8" fill="#475569"/>
-  <rect x="675" y="266" width="30" height="8" fill="#475569"/>
-
-  <!-- Rear Underrun Protection & Reflectors -->
-  <rect x="730" y="265" width="8" height="60" fill="#EA580C"/>
-  <rect x="715" y="318" width="28" height="6" fill="#EF4444"/>
-
-  <!-- Ground Line -->
-  <line x1="80" y1="334" x2="750" y2="334" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 6"/>
-
-  <!-- Engineering Annotation Specs -->
-  <g transform="translate(30, 370)">
-    <text x="0" y="16" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#F1F5F9">HEAVY-DUTY MULTI-AXLE SEMI-TRAILER</text>
-    <text x="0" y="34" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Payload Capacity: 35T - 55T | High-Tensile Steel Main Beams (IS 2062 / E350/E450 Grade)</text>
-    <text x="0" y="50" font-family="'Inter', sans-serif" font-size="10" fill="#F97316">Fabricated at Adityapur Plant • Custom Lengths &amp; Axle Formats Available</text>
+  <!-- Chassis -->
+  <path d="M105 275H738V304H105Z" fill="#0B1220" stroke="#64748B" stroke-width="2"/>
+  <path d="M115 282H730" stroke="#F97316" stroke-width="2" stroke-dasharray="12 7"/>
+  <g stroke="#38BDF8" stroke-width="1.4" opacity=".85">
+    <path d="M180 276V302M240 276V302M300 276V302M360 276V302M420 276V302M480 276V302"/>
   </g>
+
+  <!-- Landing legs -->
+  <g>
+    <rect x="220" y="274" width="10" height="55" fill="#64748B" stroke="#CBD5E1" stroke-width="1"/>
+    <rect x="244" y="274" width="10" height="55" fill="#64748B" stroke="#CBD5E1" stroke-width="1"/>
+    <path d="M215 327H235V334H215ZM239 327H259V334H239Z" fill="#F97316"/>
+    <path d="M225 285L249 309M249 285L225 309" stroke="#94A3B8" stroke-width="1.5"/>
+  </g>
+
+  <!-- Three axle suspension and wheels -->
+  <g transform="translate(535 315)">
+    <path d="M-32 -29Q0 -43 32 -29" fill="none" stroke="#F97316" stroke-width="3"/>
+    <rect x="-17" y="-34" width="34" height="8" rx="2" fill="#475569"/>
+    <circle r="37" fill="#080D16" stroke="#64748B" stroke-width="4"/>
+    <circle r="23" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
+    <circle r="8" fill="#EA580C"/><circle r="3" fill="#F8FAFC"/>
+    <g fill="#CBD5E1"><circle cx="-14" cy="0" r="2"/><circle cx="14" cy="0" r="2"/><circle cx="0" cy="-14" r="2"/><circle cx="0" cy="14" r="2"/></g>
+  </g>
+  <g transform="translate(615 315)">
+    <path d="M-32 -29Q0 -43 32 -29" fill="none" stroke="#F97316" stroke-width="3"/>
+    <rect x="-17" y="-34" width="34" height="8" rx="2" fill="#475569"/>
+    <circle r="37" fill="#080D16" stroke="#64748B" stroke-width="4"/>
+    <circle r="23" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
+    <circle r="8" fill="#EA580C"/><circle r="3" fill="#F8FAFC"/>
+    <g fill="#CBD5E1"><circle cx="-14" cy="0" r="2"/><circle cx="14" cy="0" r="2"/><circle cx="0" cy="-14" r="2"/><circle cx="0" cy="14" r="2"/></g>
+  </g>
+  <g transform="translate(695 315)">
+    <path d="M-32 -29Q0 -43 32 -29" fill="none" stroke="#F97316" stroke-width="3"/>
+    <rect x="-17" y="-34" width="34" height="8" rx="2" fill="#475569"/>
+    <circle r="37" fill="#080D16" stroke="#64748B" stroke-width="4"/>
+    <circle r="23" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
+    <circle r="8" fill="#EA580C"/><circle r="3" fill="#F8FAFC"/>
+    <g fill="#CBD5E1"><circle cx="-14" cy="0" r="2"/><circle cx="14" cy="0" r="2"/><circle cx="0" cy="-14" r="2"/><circle cx="0" cy="14" r="2"/></g>
+  </g>
+
+  <!-- Rear underrun guard and lights -->
+  <rect x="735" y="273" width="8" height="60" fill="#EA580C"/>
+  <rect x="723" y="329" width="29" height="7" rx="1" fill="#EF4444"/>
+
+  <!-- Ground line -->
+  <line x1="78" y1="360" x2="760" y2="360" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+  <!-- Footer: descriptive text added; main trailer drawing above remains unchanged -->
+  <text x="32" y="391" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing=".4" fill="#F1F5F9">SIDEWALL TRAILER</text>
+  <text x="32" y="411" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#94A3B8">Heavy-duty sidewall construction with reinforced panels for secure, versatile cargo transportation</text>
+  <text x="32" y="430" font-family="Arial, Helvetica, sans-serif" font-size="9.5" letter-spacing=".4" fill="#F97316">BUILT FOR STRENGTH, DRIVEN BY QUALITY</text>
+  <text x="768" y="430" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9.5" letter-spacing=".4" fill="#F97316">SPINE AUTOMOTIVE</text>
 </svg>
