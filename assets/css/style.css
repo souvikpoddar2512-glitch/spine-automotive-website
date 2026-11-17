@@ -904,30 +904,17 @@ button, input, select, textarea {
   box-shadow: 0 25px 35px -5px rgba(15, 23, 42, 0.15);
 }
 
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
-
-.schematic-header,
-.schematic-footer {
+.schematic-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 0.875rem 1.25rem;
+  background-color: var(--bg-surface-elevated);
+  border-bottom: 1px solid var(--border-color);
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
   gap: 0.5rem;
-}
-
-@media (max-width: 480px) {
-  .hero-trust-strip {
-    grid-template-columns: 1fr !important;
-    gap: 0.875rem;
-  }
-  
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 .schematic-status {
